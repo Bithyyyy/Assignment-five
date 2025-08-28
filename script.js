@@ -81,24 +81,41 @@ document.getElementById("heart9").addEventListener("click",function(e){
 })
 
 //Call Button
-document.getElementById("call").addEventListener("click",function(e){
+document.getElementById("call").addEventListener("click", function(e){
   e.preventDefault();
-   const coinNum = document.getElementById("coinCount");
-   const count = parseInt(coinNum.innerText);
-   const nationalNum = document.getElementById("national").innerText;
-   const phoneNum = parseInt(document.getElementById("phone").innerText); 
-   if(count >= 20){
-       const newCoin = count - 20 ;
-       coinNum.innerText = newCoin;
-       alert("Calling "+ nationalNum + ":" + phoneNum);
-       return newCoin;
-   }
-   else{
-       alert("You don't have sufficient coin to call");
-       return count;
-   }
 
-})
+  const coinNum = document.getElementById("coinCount");
+  const count = parseInt(coinNum.innerText);
+  const nationalNum = document.getElementById("national").innerText;
+  const phoneNum = document.getElementById("phone").innerText; 
+
+  if(count >= 20){
+    const newCoin = count - 20 ;
+    coinNum.innerText = newCoin;
+
+    alert("Calling " + nationalNum + " : " + phoneNum);
+    const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
+    return newCoin;
+  } else {
+    alert("You don't have sufficient coin to call");
+    return count;
+  }
+});
 document.getElementById("call2").addEventListener("click",function(e){
   e.preventDefault();
    const coinNum = document.getElementById("coinCount");
@@ -109,6 +126,22 @@ document.getElementById("call2").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -127,6 +160,22 @@ document.getElementById("call3").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -145,6 +194,22 @@ document.getElementById("call4").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -163,6 +228,22 @@ document.getElementById("call5").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -181,6 +262,22 @@ document.getElementById("call6").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -199,6 +296,22 @@ document.getElementById("call7").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -217,6 +330,22 @@ document.getElementById("call8").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -235,6 +364,22 @@ document.getElementById("call9").addEventListener("click",function(e){
        const newCoin = count - 20 ;
        coinNum.innerText = newCoin;
        alert("Calling "+ nationalNum + ":" + phoneNum);
+       const now = new Date();
+    const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+    const historyList = document.getElementById("historyList");
+    const historyItem = document.createElement("div");
+    historyItem.className = "flex items-center justify-between bg-gray-50 p-3 rounded-xl";
+
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-medium text-gray-700 text-sm">${nationalNum}</p>
+        <p class="text-xs text-gray-500">${phoneNum}</p>
+      </div>
+      <span class="text-xs text-gray-400">${currentTime}</span>
+    `;
+
+    historyList.prepend(historyItem); 
        return newCoin;
    }
    else{
@@ -268,7 +413,6 @@ document.getElementById("copyBtn").addEventListener("click", function(e){
   }
   return newCount;
 });
-
 function fallbackCopy(text) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
@@ -463,6 +607,16 @@ document.getElementById("copyBtn9").addEventListener("click", function(e){
   }
   return newCount;
 });
+
+//clear
+document.getElementById("clear").addEventListener("click", function(e){
+  e.preventDefault();
+  const historyList = document.getElementById("historyList");
+  historyList.innerHTML = "";
+});
+
+
+
 
 
 
