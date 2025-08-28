@@ -10,7 +10,7 @@
         event bubbling is adding the event listener with the( parent element or grand parents or body )but effect will work on child element
 
 4.What is Event Delegation in JavaScript? Why is it useful?
-        to add event listener to every child we can use event delegation to the parents to do the same work
+        to add event listener to every child we can use event delegation to the parents to do the same work.useful for better performance and to add new child element dynamically
 
 
 5.What is the difference between preventDefault() and stopPropagation() methods?
